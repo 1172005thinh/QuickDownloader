@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>..\..\assets\icons\err_icon_16.ico</ApplicationIcon>
+    <ApplicationIcon>..\..\assets\icons\app_icon_16.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,6 +15,10 @@
 
   <ItemGroup>
     <Resource Include="Resources\Icons\**\*.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QuickDownloader.Core\QuickDownloader.Core.csproj" />
   </ItemGroup>
 
 </Project>

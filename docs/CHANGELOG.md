@@ -2,6 +2,26 @@
 
 ## Unreleased
 
+### v0.0.6 - March 13, 2026
+
+Phase 2 - UI Template Development (Window Aesthetics):
+
+1. Enabled `AllowsTransparency="True"` and `Background="Transparent"` on the main window.
+2. Wrapped the root grid in a `Border` with `Margin="10"` and a `DropShadowEffect` to provide a modern, visible drop shadow.
+3. Applied `CornerRadius="8"` to the main container and implemented an `OpacityMask` to enforce proper rounded clipping of inner UI elements.
+4. Implemented a dynamic `BorderBrush` on the main window that highlights with the `AppPrimaryBrush` when the window is focused (active) and falls back to `AppSecondaryBrush` when inactive.
+5. Added Triggers to automatically remove the shadow margin and corner radius when the window is Maximized, ensuring it properly fits the screen without bleeding.
+
+### v0.0.5 - March 13, 2026
+
+Phase 2 - UI Template Development (Styles & Resource Management):
+
+1. Created `ColorHelper` to programmatically manage and switch application-wide colors (Light/Dark themes) using WPF DynamicResources.
+2. Created `FontHelper` to generate and manage global typography resources (Segoe UI, standardized sizes and styles: S, M, L, XL).
+3. Registered `ColorHelper` and `FontHelper` in `App.xaml.cs` to ensure resources are loaded at startup.
+4. Updated `MainWindow.xaml` to consume the new dynamic `{DynamicResource AppBackgroundBrush}`, `{DynamicResource AppSecondaryBrush}`, and `{DynamicResource Font_M_R}`.
+5. Fixed `IconHelper` path resolution for `Application.GetResourceStream()` by using absolute pack URIs to correctly load valid embedded icons.
+
 ### v0.0.4 - March 13, 2026
 
 Phase 2 - UI Template Development (Main Window Shell):

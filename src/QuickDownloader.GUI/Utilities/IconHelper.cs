@@ -70,7 +70,7 @@ namespace QuickDownloader.GUI.Utilities
             try
             {
                 // Try to resolve the resource from the assembly
-                var resourceUri = new Uri(uriString.Replace("pack://application:,,,", ""), UriKind.Relative);
+                var resourceUri = new Uri(uriString, UriKind.Absolute);
                 var streamInfo = Application.GetResourceStream(resourceUri);
                 if (streamInfo != null)
                 {
